@@ -3,4 +3,5 @@
     <string name="property_btn_text">property_btn</string>
     <string name="animation_btn_text">animation_btn</string>
     <string name="animationl_btn_text">animationl_btn</string>
+    <string name="color_state_btn_text">color_state_btn</string>
 </resources>

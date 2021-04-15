@@ -7,6 +7,12 @@
     tools:context=".MainActivity">
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_state_btn_text"
+        android:textColor="@color/button_text" />
+
+    <Button
         android:id="@+id/property_btn"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
