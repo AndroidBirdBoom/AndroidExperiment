@@ -6,18 +6,23 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Animatable;
+import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button property_btn, animation_btn;
-    private ImageView animationl_iv;
+    private ImageView animationl_iv, clip_iv;
+    private ImageButton transition_ib;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         property_btn = findViewById(R.id.property_btn);
         animation_btn = findViewById(R.id.animation_btn);
         animationl_iv = findViewById(R.id.animationl_iv);
+        transition_ib = findViewById(R.id.transition_btn);
+        clip_iv = findViewById(R.id.clip_iv);
         property_btn.setOnClickListener(this);
         animation_btn.setOnClickListener(this);
         animationl_iv.setOnClickListener(this);
+        transition_ib.setOnClickListener(this);
+        clip_iv.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +61,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     ((Animatable) catAnimation).start();
                 }
                 break;
+            case R.id.transition_btn:
+                Drawable drawable = transition_ib.getDrawable();
+                if (drawable instanceof TransitionDrawable) {
+                    ((TransitionDrawable) drawable).startTransition(500);
+                }
+                break;
+            case R.id.clip_iv:
+                Drawable drawable1 = clip_iv.getBackground();
+                if (drawable1 instanceof ClipDrawable) {
+                    drawable1.setLevel(drawable1.getLevel() + 1000);
+                } else {
+                    Toast.makeText(MainActivity.this, "clip error!", Toast.LENGTH_SHORT).show();
+                }
             default:
                 break;
         }

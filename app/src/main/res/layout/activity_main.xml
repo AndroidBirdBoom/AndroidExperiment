@@ -7,8 +7,10 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/state_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_state_bd"
         android:text="@string/color_state_btn_text"
         android:textColor="@color/button_text" />
 
@@ -29,6 +31,36 @@
         android:background="@color/purple_200"
         android:text="@string/animation_btn_text" />
 
+    <ImageButton
+        android:id="@+id/transition_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/state_btn"
+        android:layout_toRightOf="@id/layers_iv"
+        android:src="@drawable/transition" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/state_btn"
+        android:layout_toRightOf="@id/transition_btn"
+        android:src="@drawable/inset" />
+
+    <ImageView
+        android:id="@+id/clip_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bitmap_iv"
+        android:background="@drawable/clip" />
+
+    <ImageView
+        android:id="@+id/layers_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/state_btn"
+        android:layout_toRightOf="@id/bitmap_iv"
+        android:background="@drawable/layers" />
+
     <ImageView
         android:id="@+id/animationl_iv"
         android:layout_width="wrap_content"
@@ -36,5 +68,12 @@
         android:layout_below="@id/animation_btn"
         android:layout_centerHorizontal="true"
         android:background="@drawable/cat1" />
+
+    <ImageView
+        android:id="@+id/bitmap_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/state_btn"
+        android:background="@drawable/weitu" />
 
 </RelativeLayout>
