@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/group_item1"
+            android:icon="@drawable/cat1"
+            android:onClick="onGroupItemClick"
+            android:title="@string/short_menu_item_text" />
+
+        <item
+            android:id="@+id/group_item2"
+            android:icon="@drawable/cat3"
+            android:onClick="onGroupItemClick"
+            android:title="@string/long_menu_item_text" />
+
+    </group>
+    <item
+        android:id="@+id/item3"
+        android:icon="@drawable/cat3"
+        android:onClick="onItemClick"
+        android:title="@string/short_menu_item_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item1"
+        android:checkable="true"
+        android:icon="@drawable/cat1"
+        android:onClick="onItemClick"
+        android:title="@string/long_menu_item_text"
+        android:titleCondensed="@string/short_menu_item_text"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/item2"
+        android:checked="true"
+        android:icon="@drawable/cat2"
+        android:onClick="onItemClick"
+        android:title="@string/short_menu_item_text"
+        app:showAsAction="never" />
+</menu>

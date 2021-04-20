@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="button_weight">50dp</dimen>
+    <dimen name="image_size">100dp</dimen>
+</resources>

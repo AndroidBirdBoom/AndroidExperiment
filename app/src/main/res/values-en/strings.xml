@@ -4,4 +4,6 @@
     <string name="animation_btn_text">animation_btn</string>
     <string name="animationl_btn_text">animationl_btn</string>
     <string name="color_state_btn_text">color_state_btn</string>
+    <string name="long_menu_item_text">long_long_long_long_long_long_menu_item_options</string>
+    <string name="short_menu_item_text">menu_item</string>
 </resources>

@@ -4,4 +4,6 @@
     <string name="animation_btn_text">补间动画按钮</string>
     <string name="animationl_btn_text">帧动画按钮</string>
     <string name="color_state_btn_text">状态按钮</string>
+    <string name="long_menu_item_text">非常非常非常非常非常非常非常非常非常长的菜单item选项</string>
+    <string name="short_menu_item_text">菜单<b><i>item</i></b></string>
 </resources>
